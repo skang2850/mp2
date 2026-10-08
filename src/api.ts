@@ -33,7 +33,7 @@ const pokemonCache = new Map<string, Promise<PokemonDetails>>();
 
 export const getPokemonList = (): Promise<PokemonListItem[]> => {
     if (!pokemonListCache) {
-        pokemonListCache = axios.get<{results: PokemonListItem[]}>('https://pokeapi.co/api/v2/pokemon?limit=50')
+        pokemonListCache = axios.get<{results: PokemonListItem[]}>('https://pokeapi.co/api/v2/pokemon?limit=200')
             .then(({data}) => data.results)
             .catch((error) => {
                 pokemonListCache = null; // allow a retry after failure
