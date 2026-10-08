@@ -1,0 +1,51 @@
+/* DetailView.css */
+.detail-back {
+  display: flex;
+  justify-content: flex-start;   /* top-left, overriding #root's centering */
+  margin-bottom: 1rem;
+}
+
+.detail h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.detail > img {
+  display: block;
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+}
+
+.detail-info {
+  display: grid;
+  grid-template-columns: max-content max-content;  /* field | value */
+  column-gap: 2rem;
+  row-gap: 0.6rem;
+  width: fit-content;            /* shrink to the content so it can be centered */
+  margin: 0 auto;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.detail-info dt {
+  text-align: right;             /* right-align fields so they hug the values */
+  color: var(--text);
+}
+
+.detail-info dd {
+  margin: 0;                     /* browsers indent <dd> by default */
+  color: var(--text-h);
+  font-weight: 500;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.detail-pager {
+  display: flex;
+  justify-content: space-between;  /* Previous on the left, Next on the right */
+  margin-top: 2.5rem;
+}

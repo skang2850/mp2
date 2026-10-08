@@ -1,0 +1,124 @@
+/* GalleryView.css */
+.poke-gallery {
+  list-style: none;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 960px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.poke-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  height: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background 120ms, border-color 120ms, box-shadow 120ms;
+}
+
+.poke-card:hover,
+.poke-card:focus-visible {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow);
+  outline: none;
+}
+
+.poke-card-img {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poke-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.poke-card-id {
+  font-family: var(--mono);
+  font-size: 0.8em;
+  font-variant-numeric: tabular-nums;
+}
+
+.poke-card-name {
+  color: var(--text-h);
+  text-transform: capitalize;
+}
+
+.poke-card:hover .poke-card-id {
+  color: var(--accent);
+}
+
+/* GalleryView.css */
+.type-filter {
+  box-sizing: border-box;
+  width: calc(100% - 2rem);          /* match the gallery's 1rem side padding */
+  max-width: calc(960px - 2rem);     /* line up with the cards' outer edges */
+  margin: 0 auto 0.5rem;
+  padding: 0.75rem 1rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.type-filter legend {
+  padding: 0 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.type-options {
+  display: flex;
+  flex-wrap: wrap;                   /* chips flow onto new lines as needed */
+  gap: 0.5rem;
+}
+
+.type-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;                       /* space between box and text */
+  padding: 0.3rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-h);
+  border: 1px solid var(--border);
+  border-radius: 999px;              /* pill shape */
+  cursor: pointer;
+  user-select: none;
+  transition: background 120ms, border-color 120ms, color 120ms;
+}
+
+.type-options input {
+  margin: 0;
+  accent-color: var(--accent);       /* tints the checkbox itself */
+  cursor: pointer;
+}
+
+.type-options label:hover {
+  color: var(--accent);
+  border-color: var(--accent-border);
+}
+
+.type-options label:has(input:checked) {
+  color: var(--accent);
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.type-options label:has(input:focus-visible) {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
