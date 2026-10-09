@@ -73,6 +73,7 @@ export default function ListView({ pokemonList }: { pokemonList: PokemonDetails[
           </div>
          </div>
       </div>
+      {sortedPokemonList.length === 0 &&  <p className="no-results">No Pokemon found</p>}
       <ul className="poke-list">
         {sortedPokemonList.map((item) => (
           <li key={item.name}>
@@ -89,4 +90,3 @@ export default function ListView({ pokemonList }: { pokemonList: PokemonDetails[
     </>
   );
 }
-

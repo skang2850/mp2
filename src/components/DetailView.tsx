@@ -37,4 +37,3 @@ export default function DetailView({pokemonList} : { pokemonList: PokemonDetails
     </div>
   )
 }
-

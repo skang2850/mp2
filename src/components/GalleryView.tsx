@@ -31,6 +31,7 @@ export default function GalleryView({ pokemonList }: { pokemonList: PokemonDetai
           ))}
           </div>
     </fieldset>
+    {filteredPokemonList.length === 0 && <p className="no-results">No Pokemon of this type found</p>}
     <ul className="poke-gallery">
       {filteredPokemonList.map((item) => (
         <li key={item.name}>

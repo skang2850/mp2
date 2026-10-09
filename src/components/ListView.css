@@ -133,3 +133,10 @@
   border-color: var(--accent);
   position: relative;              /* keep the active button's border on top of the seam */
 }
+
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-h);
+  margin-top: 2rem;
+}

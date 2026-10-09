@@ -122,3 +122,10 @@
   border-color: var(--accent-border);
   box-shadow: 0 0 0 3px var(--accent-bg);
 }
+
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-h);
+  margin-top: 2rem;
+}
